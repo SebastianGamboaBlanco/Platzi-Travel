@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "tailwind -i ./src/css/tailwind.css -o ./public/css/tailwind.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.15"
+  }
+}

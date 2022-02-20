@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+   @apply w-48 h-64 shadow-md mr-5 rounded-lg flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl;
+}
+.cardTitle {
+   @apply text-3xl px-8 pt-8 pb-2 font-bold text-white;
+}
+
+.card:nth-child(odd) {
+   @apply bg-secondary text-white dark:bg-gray-700;
+}
+
+.card:nth-child(even) {
+   @apply bg-white text-tertiary dark:bg-gray-800 dark:text-gray-300;
+}
+.glider-track {
+   @apply w-auto h-72 items-center pt-6  flex;
+}
+.glider-dots button {
+   @apply w-7 h-1 bg-primary opacity-20 rounded-none hover:opacity-50 dark:bg-white;
+}
+.glider-dots .active {
+   @apply opacity-100 bg-primary dark:bg-white;
+}
+
+#rentasRecomendados .disabled {
+   @apply hidden;
+}

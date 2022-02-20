@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./css/glider.css" />
+      <link rel="stylesheet" href="./css/tailwind.css" />
+      <title>Platzi Travel</title>
+   </head>
+
+   <body class="font-Montserrat dark:bg-gray-900 overflow-x-hidden">
+      <nav
+         class="w-full h-14 hidden bg-white lg:flex p-4 justify-between fixed z-10 dark:bg-gray-800"
+      >
+         <div class="h-auto w-auto">
+            <p class="text-xl text-primary font-black dark:text-white">Platzi Travel</p>
+         </div>
+         <div class="flex space-x-8">
+            <a class="font-bold text-md text-primary dark:text-white" href="#home">Inicio</a>
+            <a class="font-bold text-md text-primary dark:text-white" href="#rentasRecomendados"
+               >Recomendados</a
+            >
+            <a class="font-bold text-md text-primary dark:text-white" href="#rentasDestacadas"
+               >Destacados</a
+            >
+            <a class="font-bold text-md text-primary dark:text-white" href="#faqs">FAQS</a>
+            <a class="font-bold text-md text-primary dark:text-white" href="#nosotros"
+               >Sobre Nosotros</a
+            >
+         </div>
+         <div class="flex space-x-4">
+            <svg
+               width="20"
+               height="20"
+               viewBox="0 0 23 23"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  class="fill-current text-primary dark:text-white"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.91667 0.875C4.92309 0.875 0.875 4.92309 0.875 9.91667C0.875 14.9102 4.92309 18.9583 9.91667 18.9583C11.9476 18.9583 13.8221 18.2887 15.3316 17.1582L20.6284 22.4551C21.1328 22.9595 21.9507 22.9595 22.4551 22.4551C22.9595 21.9507 22.9595 21.1328 22.4551 20.6284L17.1582 15.3316C18.2887 13.8221 18.9583 11.9476 18.9583 9.91667C18.9583 4.92309 14.9102 0.875 9.91667 0.875ZM3.45833 9.91667C3.45833 6.34983 6.34983 3.45833 9.91667 3.45833C13.4835 3.45833 16.375 6.34983 16.375 9.91667C16.375 13.4835 13.4835 16.375 9.91667 16.375C6.34983 16.375 3.45833 13.4835 3.45833 9.91667Z"
+                  fill="#CC2D4A"
+               />
+            </svg>
+            <button class="darkMode">
+               <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <path
+                     class="fill-current dark:text-white"
+                     d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96173 11.5827 7.48893 10.8106 6.33918 9.66082C5.18943 8.51107 4.41732 7.03827 4.12573 5.43863C3.83413 3.839 4.03689 2.18849 4.707 0.707001C3.52756 1.24001 2.49503 2.0512 1.698 3.07096C0.900971 4.09072 0.363229 5.28862 0.130909 6.56189C-0.101411 7.83515 -0.0213717 9.14577 0.364159 10.3813C0.749689 11.6168 1.4292 12.7404 2.3444 13.6556C3.2596 14.5708 4.38316 15.2503 5.61869 15.6358C6.85423 16.0214 8.16485 16.1014 9.43811 15.8691C10.7114 15.6368 11.9093 15.099 12.929 14.302C13.9488 13.505 14.76 12.4724 15.293 11.293Z"
+                     fill="#CC2D4A"
+                  />
+               </svg>
+            </button>
+            <svg
+               width="20"
+               height="20"
+               viewBox="0 0 25 27"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  class="fill-current text-primary dark:text-white"
+                  d="M2.78225 17.6464C4.4799 15.2799 7.48651 13.4999 12.4999 13.4999C17.5132 13.4999 20.5199 15.2799 22.2175 17.6464C23.8582 19.9336 24.1196 22.5552 24.1248 24.0058C24.13 25.4645 22.9071 26.4166 21.6533 26.4166H3.34642C2.09262 26.4166 0.869709 25.4645 0.874956 24.0058C0.880174 22.5552 1.1415 19.9336 2.78225 17.6464Z"
+                  fill="#F2F2F2"
+               />
+               <path
+                  class="fill-current text-primary dark:text-white"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5 10.9166C15.3535 10.9166 17.6667 8.60339 17.6667 5.74992C17.6667 2.89645 15.3535 0.583252 12.5 0.583252C9.64653 0.583252 7.33334 2.89645 7.33334 5.74992C7.33334 8.60339 9.64653 10.9166 12.5 10.9166Z"
+                  fill="#F2F2F2"
+               />
+            </svg>
+         </div>
+      </nav>
+
+      <section class="w-full h-auto">
+         <div class="lg:w-full lg:h-3/4" id="home">
+            <div class="w-full lg:h-full">
+               <div
+                  class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-36 lg:justify-start"
+               >
+                  <input
+                     class="outline-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden"
+                     placeholder="San Francisco"
+                     type="search"
+                     name=""
+                     id=""
+                  />
+                  <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+                     <p class="text-3xl text-black ml-16 font-semibold">
+                        Encuentra mas ubicaciones como esta
+                     </p>
+                  </div>
+                  <button
+                     class="w-48 rounded-full bg-white text-lg text-primary shadow-sm font-semibold p-4 transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16"
+                  >
+                     Explorar
+                  </button>
+               </div>
+               <div class="w-full h-auto">
+                  <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="imagenSanFrancisco" />
+
+                  <div
+                     class="hidden lg:block w-full h:full lg:h-96 lg:w-full bg-sanFranciscoDesktop lg:bg-cover lg:bg-center"
+                  ></div>
+               </div>
+            </div>
+         </div>
+         <div class="mr-2 ml-2 lg:mr-0 lg:ml-0 lg:pl-6 mb-0 relative" id="rentasRecomendados">
+            <p class="text-3xl font-semibold text-primary dark:text-white pt-6">Recomendados</p>
+            <button aria-label="Previous" class="hidden lg:block glider-prev absolute mt-12">
+               <svg
+                  width="48px"
+                  height="38px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="-200 0 320 512"
+               >
+                  <path
+                     class="fill-current text-primary lg:dark:text-white"
+                     d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"
+                     fill="#F2F2F2"
+                  />
+               </svg>
+            </button>
+            <div class="glider-contain">
+               <div class="glider lg:mr-6">
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-norway bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Noruega</p>
+                        <p class="text-md">Paisajes increibles noruega</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-new_york bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">New York</p>
+                        <p class="text-md">Paisajes increibles new york</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-yosemite bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Yosemita</p>
+                        <p class="text-md">Paisajes increibles Yosemita</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-LA bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">L.A</p>
+                        <p class="text-md">Paisajes increibles L.A</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-seattle bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Seattle</p>
+                        <p class="text-md">Paisajes increibles Seattle</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-sydney bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Sydney</p>
+                        <p class="text-md">Paisajes increibles Sydney</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-miami bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Miami</p>
+                        <p class="text-md">Paisajes increibles Miami</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-switzerland bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Switzerland</p>
+                        <p class="text-md">Paisajes increibles Switzerland</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-bali bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Bali</p>
+                        <p class="text-md">Paisajes increibles Bali</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-chicago bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Chicago</p>
+                        <p class="text-md">Paisajes increibles Chicago</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-europe bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Europa</p>
+                        <p class="text-md">Paisajes increibles Europa</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="w-full h-3/5 bg-iceland bg-cover rounded-t-lg"></div>
+                     <div class="w.full h-2/5 flex flex-col p-3 rounded-b-lg">
+                        <p class="font-bold text-xl">Iceland</p>
+                        <p class="text-md">Paisajes increibles Iceland</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div role="tablist" class="hidden lg:flex dots mt-3"></div>
+            </div>
+            <button aria-label="Next" class="glider-next hidden lg:block mt-12">
+               <svg
+                  width="48px"
+                  height="38px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="200 0 320 512"
+               >
+                  <path
+                     class="fill-current text-primary lg:dark:text-white"
+                     d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
+                     fill="#F2F2F2"
+                  />
+               </svg>
+            </button>
+         </div>
+         <div class="px-2 h-full w-full lg:px-6" id="rentasDestacadas">
+            <p class="text-3xl text-primary font-semibold pb-6 mt-6 dark:text-white">
+               Rentas Destacadas
+            </p>
+            <div class="w-full h-full flex flex-col items-center justify-center">
+               <div class="h-96 w-full bg-chicago bg-cover rounded-xl mb-8 lg:bg-center">
+                  <p class="cardTitle">Chicago</p>
+                  <p class="text-lg pl-8 text-white mr-24 font-medium lg:text-lg">
+                     2 habitaciones, baño, cocina.
+                  </p>
+               </div>
+               <div class="lg:flex lg:h-1/3 lg:w-full lg:space-x-4">
+                  <div class="h-96 w-full bg-miami bg-cover rounded-xl lg:h-auto mb-8">
+                     <p class="cardTitle">Miami</p>
+                     <p class="text-lg pl-8 text-white mr-24 font-medium lg:text-lg">
+                        3 habitaciones, 2 baños, cocina y increible vista al mar.
+                     </p>
+                  </div>
+                  <div class="h-full w-full">
+                     <div class="h-96 w-full bg-seattle bg-cover rounded-xl mb-8">
+                        <p class="cardTitle">Seattle</p>
+                        <p class="text-lg pl-8 text-white mr-24 font-medium lg:text-lg">
+                           2 habitaciones, baño, cocina.
+                        </p>
+                     </div>
+                     <div class="h-96 w-full bg-bali bg-cover rounded-xl mb-8">
+                        <p class="cardTitle">Bali</p>
+                        <p class="text-lg pl-8 text-white mr-24 font-medium lg:text-lg">
+                           2 cuartos, 2 baños, cocina y picina privada.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w-full f-full mt-0" id="faqs">
+            <div class="w-full h-full px-6 flex flex-col space-y-4 mb-5">
+               <p class="text-3xl text-primary font-semibold mt-6 dark:text-white">FAQS</p>
+               <div>
+                  <p class="text-xl font-medium text-primary dark:text-white">
+                     Política de Cancelación
+                  </p>
+                  <p class="text-md pt-2 dark:text-white">
+                     Para estancias menores a una semana es importante avisar con 3 días de
+                     anticipación, de caso contario será sancionado.
+                  </p>
+               </div>
+               <div>
+                  <p class="text-xl font-medium text-primary dark:text-white">Métodos de pago</p>
+                  <p class="text-md pt-2 dark:text-white">
+                     Aceptamos distintos métodos de pago: VISA, MasterCard, American Express, Paypal
+                     y Binance
+                  </p>
+               </div>
+               <div>
+                  <p class="text-xl font-medium text-primary dark:text-white">Mascotas</p>
+                  <p class="text-md pt-2 dark:text-white">
+                     El tema de las mascotas dependerá directamente del anfitrión.
+                  </p>
+               </div>
+               <div>
+                  <p class="text-xl font-medium text-primary dark:text-white">
+                     Información de Seguridad
+                  </p>
+                  <p class="text-md pt-2 dark:text-white">
+                     Todas nuestras estancias cuentan con seguro en caso de accidentes
+                  </p>
+               </div>
+               <div>
+                  <p class="text-xl font-medium text-primary dark:text-white">Estancias Largas</p>
+                  <p class="text-md pt-2 dark:text-white">
+                     Contamos con estancias de hasta 3 meses, en este caso es requerido un anticipo
+                     con un monto del 50% del valor de la renta
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer class="w-full h-full pb-24 lg:pb-6 bg-gray-50 p-6 space-y-4" id="nosotros">
+         <p class="text-lg space-y-2 font-bold text-gray-500">Acerca De</p>
+         <p class="text-sm text-gray-500">Inverionistas</p>
+         <p class="text-sm text-gray-500">Empleos</p>
+         <p class="text-sm text-gray-500">Términos y Condiciones</p>
+         <p class="text-sm text-gray-500">Platzi Travel, Inic.</p>
+      </footer>
+      <div
+         id="taBar"
+         class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center lg:hidden dark:bg-gray-800"
+      >
+         <a href="#home">
+            <svg
+               width="30"
+               height="30"
+               viewBox="0 0 27 26"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  id="homeTaBar"
+                  class="fill-current text-gray-300"
+                  d="M15.0159 1.03837C14.7669 0.754514 14.4034 0.588657 14.0189 0.583382C13.6344 0.578106 13.2662 0.733927 13.009 1.01084L1.00896 13.9275C0.656721 14.3067 0.567802 14.8511 0.782022 15.3171C0.996242 15.7831 1.47347 16.0833 2.00002 16.0833H4.66669V23.8333C4.66669 24.5466 5.26364 25.1249 6.00002 25.1249H11.3334V18.6666H16.6667V25.1249H22C22.7364 25.1249 23.3334 24.5466 23.3334 23.8333V16.0833H25.3334C25.8531 16.0833 26.3254 15.7907 26.5436 15.3337C26.7617 14.8768 26.6859 14.3387 26.3493 13.955L15.0159 1.03837Z"
+                  fill="#F2F2F2"
+               />
+            </svg>
+         </a>
+         <a href="#rentasRecomendados">
+            <svg
+               width="30"
+               height="30"
+               viewBox="0 0 23 23"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  id="searchTaBar"
+                  class="fill-current search text-gray-300"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.91667 0.875C4.92309 0.875 0.875 4.92309 0.875 9.91667C0.875 14.9102 4.92309 18.9583 9.91667 18.9583C11.9476 18.9583 13.8221 18.2887 15.3316 17.1582L20.6284 22.4551C21.1328 22.9595 21.9507 22.9595 22.4551 22.4551C22.9595 21.9507 22.9595 21.1328 22.4551 20.6284L17.1582 15.3316C18.2887 13.8221 18.9583 11.9476 18.9583 9.91667C18.9583 4.92309 14.9102 0.875 9.91667 0.875ZM3.45833 9.91667C3.45833 6.34983 6.34983 3.45833 9.91667 3.45833C13.4835 3.45833 16.375 6.34983 16.375 9.91667C16.375 13.4835 13.4835 16.375 9.91667 16.375C6.34983 16.375 3.45833 13.4835 3.45833 9.91667Z"
+                  fill="#CC2D4A"
+               />
+            </svg>
+         </a>
+         <a href="#rentasDestacadas">
+            <svg
+               width="30"
+               height="30"
+               viewBox="0 0 27 24"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  id="recomendadosTabar"
+                  class="fill-current favorite text-gray-300"
+                  d="M6.88589 1.1598C9.69627 0.457033 11.5415 1.33633 12.6651 2.45988C12.7875 2.58226 12.9006 2.7068 13.0051 2.83153C13.1278 2.97802 13.3091 3.06265 13.5002 3.06265C13.6913 3.06265 13.8726 2.97802 13.9953 2.83153C14.0998 2.70679 14.2129 2.58225 14.3353 2.45988C15.4589 1.33629 17.3043 0.457053 20.1153 1.1598C22.9229 1.86173 25.0419 3.97284 25.7491 6.62517C26.461 9.29528 25.7249 12.433 22.9982 15.1597C19.9813 18.1766 17.4061 20.7531 15.7854 22.3748C14.5244 23.6366 12.4827 23.6372 11.2211 22.3759L4.00388 15.1597C1.27608 12.4324 0.539973 9.29459 1.25217 6.62457C1.9596 3.9724 4.07894 1.86172 6.88589 1.1598Z"
+               />
+            </svg>
+         </a>
+         <a href="#">
+            <svg
+               width="30"
+               height="30"
+               viewBox="0 0 25 27"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  class="fill-current text-gray-300"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.78225 17.6464C4.4799 15.2799 7.48651 13.4999 12.4999 13.4999C17.5132 13.4999 20.5199 15.2799 22.2175 17.6464C23.8582 19.9336 24.1196 22.5552 24.1248 24.0058C24.13 25.4645 22.9071 26.4166 21.6533 26.4166H3.34642C2.09262 26.4166 0.869709 25.4645 0.874956 24.0058C0.880174 22.5552 1.1415 19.9336 2.78225 17.6464Z"
+                  fill="#F2F2F2"
+               />
+               <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5 10.9166C15.3535 10.9166 17.6667 8.60339 17.6667 5.74992C17.6667 2.89645 15.3535 0.583252 12.5 0.583252C9.64653 0.583252 7.33334 2.89645 7.33334 5.74992C7.33334 8.60339 9.64653 10.9166 12.5 10.9166Z"
+                  fill="#F2F2F2"
+               />
+            </svg>
+         </a>
+         <button class="darkMode">
+            <svg
+               width="30"
+               height="30"
+               viewBox="0 0 16 16"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+            >
+               <path
+                  class="fill-current dark:text-white"
+                  d="M15.293 11.293C13.8115 11.9631 12.161 12.1659 10.5614 11.8743C8.96173 11.5827 7.48893 10.8106 6.33918 9.66082C5.18943 8.51107 4.41732 7.03827 4.12573 5.43863C3.83413 3.839 4.03689 2.18849 4.707 0.707001C3.52756 1.24001 2.49503 2.0512 1.698 3.07096C0.900971 4.09072 0.363229 5.28862 0.130909 6.56189C-0.101411 7.83515 -0.0213717 9.14577 0.364159 10.3813C0.749689 11.6168 1.4292 12.7404 2.3444 13.6556C3.2596 14.5708 4.38316 15.2503 5.61869 15.6358C6.85423 16.0214 8.16485 16.1014 9.43811 15.8691C10.7114 15.6368 11.9093 15.099 12.929 14.302C13.9488 13.505 14.76 12.4724 15.293 11.293Z"
+                  fill="#CC2D4A"
+               />
+            </svg>
+         </button>
+      </div>
+      <script src="./js/glider.js"></script>
+      <script>
+         window.addEventListener("load", function () {
+            new Glider(document.querySelector(".glider"), {
+               slidesToScroll: 7,
+               slidesToShow: 7,
+               dots: ".dots",
+               arrows: {
+                  prev: ".glider-prev",
+                  next: ".glider-next",
+               },
+            });
+         });
+
+         window.addEventListener("scroll", () => {
+            const scrolLabel = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolLLy = window.scrollY;
+
+            if (scrolLLy < 150) {
+               asignar("homeTaBar");
+               /*document.querySelector("#homeTaBar").classList.remove("text-gray-300");
+               document.querySelector("#searchTaBar").classList.remove("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.remove("text-gray-300");
+               document.querySelector("#homeTaBar").classList.add("text-primary");
+               document.querySelector("#searchTaBar").classList.add("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.add("text-gray-300");*/
+            }
+            if (scrolLLy > 150 && scrolLLy < 600) {
+               asignar("searchTaBar");
+               /*document.querySelector("#homeTaBar").classList.remove("text-gray-300");
+               document.querySelector("#searchTaBar").classList.remove("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.remove("text-gray-300");
+               document.querySelector("#homeTaBar").classList.add("text-gray-300");
+               document.querySelector("#searchTaBar").classList.add("text-primary");
+               document.querySelector("#recomendadosTabar").classList.add("text-gray-300");*/
+            }
+            if (scrolLLy > 600 && scrolLLy < 2300) {
+               asignar("recomendadosTabar");
+               /*document.querySelector("#homeTaBar").classList.remove("text-gray-300");
+               document.querySelector("#searchTaBar").classList.remove("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.remove("text-gray-300");
+               document.querySelector("#homeTaBar").classList.add("text-gray-300");
+               document.querySelector("#searchTaBar").classList.add("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.add("text-primary");*/
+            }
+            if (scrolLLy > 2300) {
+               asignar(0);
+               /*document.querySelector("#homeTaBar").classList.remove("text-gray-300");
+               document.querySelector("#searchTaBar").classList.remove("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.remove("text-gray-300");
+               document.querySelector("#homeTaBar").classList.add("text-gray-300");
+               document.querySelector("#searchTaBar").classList.add("text-gray-300");
+               document.querySelector("#recomendadosTabar").classList.add("text-gray-300");*/
+            }
+         });
+
+         let cambio = "";
+         const etiquetas = ["homeTaBar", "searchTaBar", "recomendadosTabar"];
+
+         const asignar = (valor) => {
+            if (cambio != "") {
+               if (valor != 0) {
+                  document
+                     .querySelector(`#${cambio}`)
+                     .classList.replace("text-primary", "text-gray-300");
+                  document
+                     .querySelector(`#${valor}`)
+                     .classList.replace("text-gray-300", "text-primary");
+                  cambio = valor;
+               } else {
+                  document
+                     .querySelector(`#${cambio}`)
+                     .classList.replace("text-primary", "text-gray-300");
+                  cambio = "";
+               }
+            } else {
+               valor != 0 &&
+                  document
+                     .querySelector(`#${valor}`)
+                     .classList.replace("text-gray-300", "text-primary"),
+                  (cambio = valor);
+            }
+         };
+         const htmlElement = document.querySelector("html");
+         const toggleButton = document.querySelectorAll(".darkMode");
+         toggleButton.forEach((item) => {
+            item.addEventListener("click", () => {
+               htmlElement.classList.toggle("dark");
+            });
+         });
+      </script>
+   </body>
+</html>
